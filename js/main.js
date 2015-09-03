@@ -3,7 +3,9 @@
 
 var quiz = document.getElementById('quiz');
 var btnStart = document.getElementById('start-quiz');
-var questionsHit = 0;
+var questionsHit = 0,
+questionsNumber = 0;
+
 
 // Array of Questions...
 var questions = [
@@ -63,7 +65,7 @@ var createQuestionElements = function(currentQuestion) {
 
 	quiz.appendChild(questionHolder);
 
-	btn.classList.add('btn');
+ 	btn.classList.add('btn');
 	btn.classList.add('btn-small');
 	btn.innerHTML = 'Submit';
 
@@ -85,7 +87,7 @@ var checkAnswer = function(currentQuestion) {
 		questionsHit = questionsHit + 1;
 	}
 
-	console.log(questionsHit);
+	questionsNumber = questionsNumber + 1;
 }
 
 var showScore = function() {
@@ -93,7 +95,7 @@ var showScore = function() {
 	firstHeading.innerHTML = 'Congratulations for finish the Quiz!!!';
 
 	var secondHeading = document.createElement('h3');
-	secondHeading.innerHTML = 'Your score is ' + questionsHit + ' out of 3';
+	secondHeading.innerHTML = 'Your score is ' + questionsHit + ' out of ' + questionsNumber;
 
 	quiz.appendChild(firstHeading);
 	quiz.appendChild(secondHeading)
