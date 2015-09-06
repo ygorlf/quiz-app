@@ -21,13 +21,18 @@ var questions = [
 	},
 	{
 		question: 'What is the capital of Germany?',
-		choices: ['Berlim', 'Paris', 'Lyon', 'Montevideu'],
+		choices: ['Berlim', 'Paris', 'Lyon', 'Montevidéu'],
 		correctAnswer: 0,
 	},
 	{
 		question: 'What is the capital of Argentina?',
 		choices: ['Munique', 'Kiev', 'New York', 'Bueno Aires'],
 		correctAnswer: 3,
+	},
+	{
+		question: 'What is the capital of Norway?',
+		choices: ['Beijing', 'Oslo', 'Sidney', 'Seattle'],
+		correctAnswer: 1,
 	},
 ];
 
