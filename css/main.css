@@ -103,3 +103,16 @@ form {
 .answer {
   margin: 0.75em 0;
 }
+.question-alert {
+  display: none;
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 160px;
+  padding: 10px;
+  color: #fff;
+  background: rgba(46,139,87,0.6);
+  border-radius: 7px;
+  font-size: 0.9em;
+}

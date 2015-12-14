@@ -75,25 +75,39 @@ var createQuestionElements = function(currentQuestion) {
 	btn.innerHTML = 'Submit';
 
 	btn.addEventListener('click', function() {
-		checkAnswer(currentQuestion);
-		quiz.innerHTML = '';
-		getQuestion();
+		validateAnswer(currentQuestion);
 	});
 
 	quiz.appendChild(btn);
 }
 
-var checkAnswer = function(currentQuestion) {
-	var answer = document.querySelector('.option input:checked');
-
-	console.log(currentQuestion.choices[currentQuestion.correctAnswer]);
-
-	if (answer.nextSibling.innerHTML === currentQuestion.choices[currentQuestion.correctAnswer]) {
+var checkAnswer = function(option, currentQuestion) {
+	if (option.lastElementChild.innerHTML === currentQuestion.choices[currentQuestion.correctAnswer]) {
 		questionsHit = questionsHit + 1;
 	}
 
 	questionsNumber = questionsNumber + 1;
-}
+	quiz.innerHTML = '';
+	getQuestion();
+};
+
+var validateAnswer = function(currentQuestion){
+	var input = document.querySelectorAll('.option input');
+	var inputCounter = 0;
+	for (var i = 0; i < input.length; i++) {
+		if (input[i].checked) {
+			inputCounter = inputCounter + 1;
+		}
+	}
+
+	if (inputCounter > 0) {
+		document.querySelector('.question-alert').style.display = 'none';
+		var option = document.querySelector('input:checked').parentNode;
+		checkAnswer(option,currentQuestion);
+	} else {
+		document.querySelector('.question-alert').style.display = 'block';
+	}
+};
 
 var showScore = function() {
 	var firstHeading = document.createElement('h2');
