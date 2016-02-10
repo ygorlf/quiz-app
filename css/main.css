@@ -8,7 +8,7 @@
 }
 body {
   font: 16px/1.2 'Roboto Slab', serif;
-  background: #ff6347;
+  background: #da70d6;
   color: #333;
 }
 a {
@@ -26,7 +26,7 @@ h1 {
 }
 h1 span {
   display: block;
-  color: #ff0;
+  color: #f0f;
 }
 h2 {
   font-size: 2.5em;
@@ -57,7 +57,7 @@ form {
   margin: 30px auto;
   padding: 2em 0;
   background: #fffafa;
-  box-shadow: 6px 6px 0 rgba(46,139,87,0.6);
+  box-shadow: -10px 0 #f0f;
 }
 @media (max-width: 667px) {
   #quiz {
@@ -66,7 +66,7 @@ form {
 }
 .awesome-text {
   font-weight: 400;
-  text-shadow: 5px 5px 3px rgba(0,0,0,0.6);
+  text-shadow: 3px 3px 3px rgba(0,0,0,0.6);
 }
 .option {
   width: 115px;
@@ -83,11 +83,14 @@ form {
   font-weight: 400;
   cursor: pointer;
   color: #fff;
-  background: #2e8b57;
+  background: #f0f;
   border-radius: 7px;
+  border: 1px solid #f0f;
+  transition: all 0.5s ease-in;
 }
 .btn:hover {
-  background: rgba(46,139,87,0.5);
+  background: #fff;
+  color: #f0f;
 }
 .btn-small {
   width: 115px;
@@ -112,7 +115,7 @@ form {
   max-width: 160px;
   padding: 10px;
   color: #fff;
-  background: rgba(46,139,87,0.6);
+  background: #f0f;
   border-radius: 7px;
   font-size: 0.9em;
 }
